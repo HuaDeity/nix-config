@@ -82,6 +82,7 @@
             mkShell {
               nativeBuildInputs = with pkgs; [
                 bashInteractive
+                doppler
                 git
               ];
               shellHook = ''

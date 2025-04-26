@@ -151,7 +151,7 @@
                   "laishulu/homebrew-macism" = homebrew-macism;
                   "nrlquaker/homebrew-createzap" = homebrew-createzap;
                 };
-                mutableTaps = true;
+                mutableTaps = false;
                 autoMigrate = true;
               };
             }

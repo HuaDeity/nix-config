@@ -46,6 +46,7 @@ in
         home = {
           activation.chezmoi = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
             echo "HM Activation: Starting chezmoi init/apply..."
+            export PATH=${brewPrefix}:$PATH
             $DRY_RUN_CMD ${brewPrefix}/chezmoi init --apply ${githubUsername} --promptString hostname=${hostname}
             echo "HM Activation: Finished chezmoi init/apply."
           '';

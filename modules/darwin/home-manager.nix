@@ -6,6 +6,7 @@
 let
   githubUsername = "HuaDeity";
   user = "huadeity";
+  hostname = "ViMacBook";
   brewPrefix = config.homebrew.brewPrefix;
 in
 {
@@ -45,7 +46,7 @@ in
         home = {
           activation.chezmoi = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
             echo "HM Activation: Starting chezmoi init/apply..."
-            $DRY_RUN_CMD ${brewPrefix}/chezmoi init --apply ${githubUsername}
+            $DRY_RUN_CMD ${brewPrefix}/chezmoi init --apply ${githubUsername} --promptString hostname=${hostname}
             echo "HM Activation: Finished chezmoi init/apply."
           '';
           enableNixpkgsReleaseCheck = true;

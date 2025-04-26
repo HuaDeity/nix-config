@@ -15,6 +15,7 @@ _:
   "imagemagick"
   "jupyterlab"
   "lazygit"
+  "less"
   "neovim"
   "ollama"
   "pre-commit"

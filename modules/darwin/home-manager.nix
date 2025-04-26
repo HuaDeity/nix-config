@@ -47,7 +47,13 @@ in
           activation.chezmoi = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
             echo "HM Activation: Starting chezmoi init/apply..."
             export PATH=${brewPrefix}:$PATH
-            doppler login
+            # Check if already logged in by running doppler me
+            if doppler me >/dev/null 2>&1; then
+                echo "Already logged in to Doppler."
+            else
+                echo "Not logged in. Performing login..."
+                doppler login
+            fi
             $DRY_RUN_CMD ${brewPrefix}/chezmoi init --apply ${githubUsername} --promptString hostname=${hostname}
             echo "HM Activation: Finished chezmoi init/apply."
           '';

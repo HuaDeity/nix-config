@@ -16,10 +16,6 @@
     nix-homebrew = {
       url = "github:zhaofengli-wip/nix-homebrew";
     };
-    homebrew-autoupdate = {
-      url = "github:domt4/homebrew-autoupdate";
-      flake = false;
-    };
     homebrew-cask = {
       url = "github:homebrew/homebrew-cask";
       flake = false;
@@ -51,7 +47,6 @@
       self,
       darwin,
       nix-homebrew,
-      homebrew-autoupdate,
       homebrew-cask,
       homebrew-command-not-found,
       homebrew-core,
@@ -142,7 +137,6 @@
                 # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
                 enableRosetta = false;
                 taps = {
-                  "domt4/homebrew-autoupdate" = homebrew-autoupdate;
                   "homebrew/homebrew-cask" = homebrew-cask;
                   "homebrew/homebrew-command-not-found" = homebrew-command-not-found;
                   "homebrew/homebrew-core" = homebrew-core;

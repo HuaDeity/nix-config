@@ -40,7 +40,7 @@
       url = "github:nrlquaker/homebrew-createzap";
       flake = false;
     };
-    mihoyo-bbs-tools.url = {
+    mihoyo-bbs-tools = {
       url = "github:https://github.com/Womsxd/MihoyoBBSTools";
     };
   };

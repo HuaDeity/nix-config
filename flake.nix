@@ -41,7 +41,7 @@
       flake = false;
     };
     mihoyo-bbs-tools = {
-      url = "github:https://github.com/Womsxd/MihoyoBBSTools";
+      url = "github:Womsxd/MihoyoBBSTools";
     };
   };
 

@@ -52,7 +52,6 @@ _:
   "tencent-meeting"
   "tower"
   "vesktop"
-  "virtualbuddy"
   "xscope"
   "zed@preview"
 ]

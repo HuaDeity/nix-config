@@ -40,9 +40,6 @@
       url = "github:nrlquaker/homebrew-createzap";
       flake = false;
     };
-    mihoyo-bbs-tools = {
-      url = "github:Womsxd/MihoyoBBSTools";
-    };
   };
 
   outputs =
@@ -56,7 +53,6 @@
       homebrew-private,
       homebrew-macism,
       homebrew-createzap,
-      mihoyo-bbs-tools,
       home-manager,
       nixpkgs,
     }@inputs:

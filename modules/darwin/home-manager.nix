@@ -35,13 +35,8 @@ in
   home-manager = {
     useGlobalPkgs = true;
     users.${user} =
+      { ... }:
       {
-        ...
-      }:
-      {
-        imports = [
-          ../shared/checkin.nix
-        ];
         home = {
           enableNixpkgsReleaseCheck = true;
           stateVersion = "24.11";

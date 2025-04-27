@@ -24,7 +24,6 @@ _:
   "rustup"
   "starship"
   "stylua"
-  "thefuck"
   "tmux"
   "uv"
   "viu"

@@ -4,9 +4,7 @@
 }:
 
 let
-  githubUsername = "HuaDeity";
   user = "huadeity";
-  hostname = "ViMacBook";
   brewPrefix = config.homebrew.brewPrefix;
 in
 {
@@ -35,34 +33,20 @@ in
   };
 
   # Enable home-manager
-  home-manager = {
-    useGlobalPkgs = true;
-    users.${user} =
-      {
-        lib,
-        ...
-      }:
-      {
-        home = {
-          activation.chezmoi = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-            echo "HM Activation: Starting chezmoi init/apply..."
-            export PATH=${brewPrefix}:$PATH
-            # Check if already logged in by running doppler me
-            if doppler me >/dev/null 2>&1; then
-                echo "Already logged in to Doppler."
-            else
-                echo "Not logged in. Performing login..."
-                doppler login
-            fi
-            $DRY_RUN_CMD ${brewPrefix}/chezmoi init --apply ${githubUsername} --promptString hostname=${hostname}
-            echo "HM Activation: Finished chezmoi init/apply."
-          '';
-          enableNixpkgsReleaseCheck = true;
-          stateVersion = "24.11";
-        };
+  # home-manager = {
+  #   useGlobalPkgs = true;
+  #   users.${user} =
+  #     {
+  #       ...
+  #     }:
+  #     {
+  #       home = {
+  #         enableNixpkgsReleaseCheck = true;
+  #         stateVersion = "24.11";
+  #       };
 
-      };
-  };
+  #     };
+  # };
 
   # Fully declarative dock using the latest from Nix Store
   local.dock.enable = true;

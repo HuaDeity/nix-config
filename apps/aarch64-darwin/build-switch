@@ -7,6 +7,7 @@ NC='\033[0m'
 
 SYSTEM_TYPE="aarch64-darwin"
 FLAKE_SYSTEM="darwinConfigurations.${SYSTEM_TYPE}.system"
+GITHUB_USERNAME="HuaDeity"
 
 export NIXPKGS_ALLOW_UNFREE=1
 
@@ -15,6 +16,16 @@ nix --extra-experimental-features 'nix-command flakes' build .#$FLAKE_SYSTEM $@
 
 echo "${YELLOW}Switching to new generation...${NC}"
 ./result/sw/bin/darwin-rebuild switch --flake .#${SYSTEM_TYPE} $@
+
+echo "${YELLOW}Starting chezmoi init/apply...${NC}"
+# Check if already logged in by running doppler me
+if doppler me >/dev/null 2>&1; then
+    echo "Already logged in to Doppler."
+else
+    echo "Not logged in. Performing login..."
+    doppler login
+fi
+chezmoi init --apply ${githubUsername}
 
 echo "${YELLOW}Cleaning up...${NC}"
 unlink ./result

@@ -68,7 +68,6 @@
       ];
       darwinSystems = [
         "aarch64-darwin"
-        "x86_64-darwin"
       ];
       forAllSystems = f: nixpkgs.lib.genAttrs (linuxSystems ++ darwinSystems) f;
       devShell =

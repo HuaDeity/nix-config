@@ -18,14 +18,35 @@ echo "${YELLOW}Switching to new generation...${NC}"
 ./result/sw/bin/darwin-rebuild switch --flake .#${SYSTEM_TYPE} $@
 
 echo "${YELLOW}Starting chezmoi init/apply...${NC}"
-# Check if already logged in by running doppler me
-if doppler me >/dev/null 2>&1; then
-    echo "Already logged in to Doppler."
-else
-    echo "Not logged in. Performing login..."
-    doppler login
+# Add Homebrew paths if they exist
+if [ -d "/opt/homebrew/bin" ]; then
+  export PATH="/opt/homebrew/bin:$PATH"
 fi
-chezmoi init --apply ${githubUsername}
+# Check if already logged in by running doppler me
+if command -v doppler >/dev/null 2>&1; then
+  if doppler me >/dev/null 2>&1; then
+    echo "Already logged in to Doppler."
+  else
+    echo "Not logged in to Doppler. Performing login..."
+    doppler login
+  fi
+else
+  echo -e "${YELLOW}Warning: Doppler command not found. Skipping Doppler check.${NC}"
+fi
+# Ensure GITHUB_USERNAME is set (replace this with how you actually get the username)
+# Example: GITHUB_USERNAME=$(gh api user --jq .login) or read -p "Enter GitHub Username: " GITHUB_USERNAME
+if [ -z "${GITHUB_USERNAME}" ]; then
+  echo "Error: GITHUB_USERNAME variable is not set."
+  exit 1
+fi
+# Run chezmoi init/apply
+if command -v chezmoi >/dev/null 2>&1; then
+  echo "Running chezmoi init --apply ${githubUsername}..."
+  chezmoi init --apply ${githubUsername}
+else
+  echo "Error: chezmoi command not found. Please ensure chezmoi is installed and in your PATH."
+  exit 1
+fi
 
 echo "${YELLOW}Cleaning up...${NC}"
 unlink ./result

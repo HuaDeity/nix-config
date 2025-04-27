@@ -11,7 +11,6 @@ shared-packages
   "hugo"
   "macism"
   "mas"
-  "nvm"
   "pinentry-mac"
   "uutils-coreutils"
 ]

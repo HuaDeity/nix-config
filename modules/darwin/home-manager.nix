@@ -5,7 +5,6 @@
 
 let
   user = "huadeity";
-  brewPrefix = config.homebrew.brewPrefix;
 in
 {
   imports = [
@@ -33,20 +32,22 @@ in
   };
 
   # Enable home-manager
-  # home-manager = {
-  #   useGlobalPkgs = true;
-  #   users.${user} =
-  #     {
-  #       ...
-  #     }:
-  #     {
-  #       home = {
-  #         enableNixpkgsReleaseCheck = true;
-  #         stateVersion = "24.11";
-  #       };
-
-  #     };
-  # };
+  home-manager = {
+    useGlobalPkgs = true;
+    users.${user} =
+      {
+        ...
+      }:
+      {
+        imports = [
+          ../shared/checkin.nix
+        ];
+        home = {
+          enableNixpkgsReleaseCheck = true;
+          stateVersion = "24.11";
+        };
+      };
+  };
 
   # Fully declarative dock using the latest from Nix Store
   local.dock.enable = true;

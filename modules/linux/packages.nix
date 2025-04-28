@@ -14,7 +14,7 @@ let
       pkgs.jupyter
     else
       pkgs.${pkgName}
-  ) (import ../shared/packages.nix);
+  ) ((import ../shared/packages.nix) { });
 
   guiPackages = [
     ghostty

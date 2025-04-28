@@ -20,8 +20,7 @@
       ];
       trusted-users = [
         "@admin"
-        "huadeity"
-        "wangyizun"
+        "@administrators"
       ];
       use-xdg-base-directories = true;
     };

@@ -3,10 +3,6 @@
   ...
 }:
 
-let
-  user = "wangyizun";
-in
-
 {
   nix = {
     package = pkgs.nix;
@@ -24,7 +20,8 @@ in
       ];
       trusted-users = [
         "@admin"
-        "${user}"
+        "huadeity"
+        "wangyizun"
       ];
       use-xdg-base-directories = true;
     };

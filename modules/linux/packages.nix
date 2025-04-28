@@ -22,7 +22,8 @@ let
   ];
 
   cliPackages = [
-    nvitop
+    home-manager
+    mihomo
   ];
 
   addPackages = if isGraphical then guiPackages ++ cliPackages else cliPackages;

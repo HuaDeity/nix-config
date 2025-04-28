@@ -14,6 +14,7 @@ _:
   "git-lfs"
   "imagemagick"
   "jupyterlab"
+  "just"
   "lazygit"
   "less"
   "neovim"

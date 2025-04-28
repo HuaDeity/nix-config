@@ -12,9 +12,9 @@ in
     package = pkgs.nix;
 
     settings = {
-      trusted-users = [
-        "@admin"
-        "${user}"
+      experimental-features = [
+        "nix-command"
+        "flakes"
       ];
       substituters = [
         "https://nix-community.cachix.org"
@@ -22,15 +22,16 @@ in
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
+      trusted-users = [
+        "@admin"
+        "${user}"
+      ];
+      use-xdg-base-directories = true;
     };
 
     gc = {
       automatic = true;
       options = "--delete-older-than 7d";
     };
-
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
   };
 }

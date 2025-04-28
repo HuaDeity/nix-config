@@ -22,6 +22,7 @@ let
   ];
 
   cliPackages = [
+    home-manager
     nvitop
   ];
 

@@ -1,9 +1,6 @@
 default:
   @just --list
 
-GITHUB_USERNAME := "HuaDeity"
-PASSWORD_MANAGER := "doppler"
-
 export NIX_CONFIG := "
   accept-flake-config = true
   extra-experimental-features = flakes nix-command
@@ -37,21 +34,3 @@ switch *args:
 confirm-switch *args:
   just rebuild switch {{args}}
 
-dot_init:
-  chezmoi init --apply ${GITHUB_USERNAME}
-
-pass_login:
-  ${PASSWORD_MANAGER} login
-
-[macos]
-nix_init *args:
-  just switch {{args}}
-
-[linux]
-nix_init *args:
-  nix run home-manager/master -- init --switch .#{{arch()}}-linux {{args}}
-
-init *args:
-  just nix_init {{args}}
-  just pass_login
-  just dot_init

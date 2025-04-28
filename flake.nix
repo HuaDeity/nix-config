@@ -162,7 +162,6 @@
           inherit pkgs;
           extraSpecialArgs = inputs;
           modules = [
-            ./modules/linux/home-manager.nix
             ./hosts/linux
           ];
         }

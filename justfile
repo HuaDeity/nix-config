@@ -52,6 +52,6 @@ nix_init *args:
   nix run home-manager/master -- init --switch .#{{arch()}}-linux {{args}}
 
 init *args:
-  nix_init {{args}}
+  just nix_init {{args}}
   just pass_login
   just dot_init

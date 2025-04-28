@@ -9,12 +9,6 @@ export NIX_CONFIG := "
   extra-experimental-features = flakes nix-command
 "
 
-dot_init:
-  chezmoi init --apply ${GITHUB_USERNAME}
-
-pass_login:
-  ${PASSWORD_MANAGER} login
-
 # wrapper around {linux,darwin}-rebuild, always taking the flake
 [macos]
 rebuild *args:
@@ -43,8 +37,21 @@ switch *args:
 confirm-switch *args:
   just rebuild switch {{args}}
 
-init *args:
+dot_init:
+  chezmoi init --apply ${GITHUB_USERNAME}
+
+pass_login:
+  ${PASSWORD_MANAGER} login
+
+[macos]
+nix_init *args:
   just switch {{args}}
+
+[linux]
+nix_init *args:
+  nix run home-manager/master -- init --switch .#{{arch()}}-linux {{args}}
+
+init *args:
+  nix_init {{args}}
   just pass_login
   just dot_init
-

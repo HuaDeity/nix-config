@@ -5,9 +5,7 @@ let
 in
 shared-packages
 ++ [
-  "antidote"
   "dockutil"
-  "fisher"
   "hugo"
   "macism"
   "mas"

@@ -1,12 +1,13 @@
 _:
 
 [
+  "antidote"
+  "bash"
   "bat"
   "chezmoi"
   "doppler"
   "eza"
   "fd"
-  "fish"
   "fzf"
   "gh"
   "git"
@@ -31,4 +32,5 @@ _:
   "wakatime-cli"
   "wget"
   "yazi"
+  "zsh"
 ]

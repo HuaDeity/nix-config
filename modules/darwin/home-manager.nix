@@ -5,17 +5,22 @@
 
 let
   user = "huadeity";
+  brewPrefix = config.homebrew.brewPrefix;
 in
 {
   imports = [
     ./dock
   ];
 
+  users.knownUsers = [ "${user}" ];
+
   # It me
   users.users.${user} = {
     name = "${user}";
     home = "/Users/${user}";
     isHidden = false;
+    uid = 501;
+    shell = "${brewPrefix}/zsh";
   };
 
   homebrew = {

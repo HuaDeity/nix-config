@@ -12,6 +12,8 @@ let
       pkgs.gitflow
     else if pkgName == "jupyterlab" then
       pkgs.jupyter
+    else if pkgName == "node" then
+      pkgs.nodejs_23
     else
       pkgs.${pkgName}
   ) ((import ../shared/packages.nix) { });

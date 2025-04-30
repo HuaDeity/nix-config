@@ -19,6 +19,7 @@ _:
   "lazygit"
   "less"
   "neovim"
+  "node"
   "ollama"
   "pre-commit"
   "ripgrep"

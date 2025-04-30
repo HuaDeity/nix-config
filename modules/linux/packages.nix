@@ -24,6 +24,7 @@ let
   cliPackages = [
     home-manager
     mihomo
+    ncurses
   ];
 
   addPackages = if isGraphical then guiPackages ++ cliPackages else cliPackages;

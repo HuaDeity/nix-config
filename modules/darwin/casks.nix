@@ -21,7 +21,6 @@ _:
   "istat-menus"
   "iterm2"
   "itermai"
-  "jetbrains-toolbox"
   "jordanbaird-ice"
   "kaleidoscope"
   "keka"

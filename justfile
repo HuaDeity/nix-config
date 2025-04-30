@@ -1,11 +1,6 @@
 default:
   @just --list
 
-export NIX_CONFIG := "
-  accept-flake-config = true
-  extra-experimental-features = flakes nix-command
-"
-
 # wrapper around {linux,darwin}-rebuild, always taking the flake
 [macos]
 rebuild *args:

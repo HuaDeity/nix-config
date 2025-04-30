@@ -11,10 +11,23 @@
 
   environment.systemPackages = import ../../modules/shared/system-packages.nix { inherit pkgs; };
 
-  nix.gc.interval = {
-    Weekday = 0;
-    Hour = 2;
-    Minute = 0;
+  nix = {
+    gc = {
+      interval = {
+        Weekday = 0;
+        Hour = 2;
+        Minute = 0;
+      };
+    };
+    settings = {
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      trusted-users = [
+        "@admin"
+      ];
+    };
   };
 
   security = {

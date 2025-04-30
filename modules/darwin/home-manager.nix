@@ -53,7 +53,7 @@ in
   local.dock.enable = true;
   local.dock.entries = [
     { path = "/System/Applications/Facetime.app/"; }
-    { path = "/Applications/Safari.app/"; }
+    { path = "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/"; }
     { path = "/System/Applications/Messages.app/"; }
     { path = "/System/Applications/Music.app/"; }
     { path = "/System/Applications/Mail.app/"; }

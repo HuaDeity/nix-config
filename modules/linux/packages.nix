@@ -18,6 +18,8 @@ let
       pkgs.${pkgName}
   ) ((import ../shared/packages.nix) { });
 
+  system-packages = (import ../shared/system-packages.nix) { inherit pkgs; };
+
   guiPackages = [
     ghostty
     monaspace
@@ -31,4 +33,4 @@ let
   addPackages = if isGraphical then guiPackages ++ cliPackages else cliPackages;
 
 in
-shared-packages ++ addPackages
+shared-packages ++ system-packages ++ addPackages

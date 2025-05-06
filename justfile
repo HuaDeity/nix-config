@@ -17,7 +17,6 @@ build *args:
 check *args:
   just rebuild check {{args}}
 
-[macos]
 update *args:
   nix flake update {{args}}
 

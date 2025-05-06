@@ -31,7 +31,6 @@ _:
   "orion"
   "pearcleaner"
   "permute"
-  "playcover-community"
   "popclip"
   "qlmarkdown"
   "qlvideo"

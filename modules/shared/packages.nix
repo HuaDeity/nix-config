@@ -27,6 +27,7 @@ _:
   "selene"
   "starship"
   "stylua"
+  "taplo"
   "tmux"
   "uv"
   "viu"

@@ -10,6 +10,7 @@ _:
   "chatwise"
   "cleanshot"
   "copilot-for-xcode"
+  "cursor"
   "downie"
   "elpass"
   "festivitas"

@@ -12,7 +12,6 @@ _:
   "copilot-for-xcode"
   "cursor"
   "downie"
-  "elpass"
   "festivitas"
   "font-monaspace"
   "ghostty"

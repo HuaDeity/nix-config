@@ -60,6 +60,7 @@ in
     { path = "/System/Applications/Photo Booth.app/"; }
     { path = "/Applications/Reeder.app/"; }
     { path = "/Applications/Bookends.app/"; }
+    { path = "/Applications/Tower.app/"; }
     { path = "/Applications/Ghostty.app/"; }
     { path = "/Applications/Zed Preview.app/"; }
     { path = "/System/Applications/iPhone Mirroring.app/"; }

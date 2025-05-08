@@ -4,6 +4,7 @@ _:
   "Actions" = 1586435171;
   # "AppRaven: Apps Gone Free" = 1490607195;
   "Bear" = 1091189122;
+  "Bitwarden" = 1352778147;
   "Bob" = 1630034110;
   "Cardhop" = 1290358394;
   # "Chronicling - Track Anything" = 6445992145;

@@ -14,9 +14,7 @@ _:
   "FilmNoir" = 1528417240;
   "Final Cut Pro" = 424389933;
   "Flighty" = 1358823008;
-  "Flow" = 1423210932;
   "Folder Preview" = 6698876601;
-  "GameTrack" = 1136800740;
   "GarageBand" = 682658836;
   "GoodLinks" = 1474335294;
   "GoodNotes" = 1444383602;
@@ -32,7 +30,6 @@ _:
   "LookUp" = 872564448;
   "MainStage" = 634159523;
   "Maipo" = 789066512;
-  "MindNode Next" = 6446116532;
   "Motion" = 434290957;
   "MusicBox" = 1614730313;
   "MusicHarbor" = 1440405750;
@@ -56,7 +53,6 @@ _:
   "Sketch" = 1667260533;
   "SnippetsLab" = 1006087419;
   "StopTheMadness Pro" = 6471380298;
-  "Storylines" = 1601966301;
   "Streaks" = 963034692;
   "SubManager" = 1632853914;
   "Tampermonkey" = 6738342400;

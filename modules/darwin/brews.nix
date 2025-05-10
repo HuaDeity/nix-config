@@ -7,7 +7,7 @@ shared-packages
 ++ [
   "dockutil"
   "hugo"
-  "macism"
+  "laishulu/homebrew/macism"
   "mas"
   "pinentry-mac"
   "uutils-coreutils"

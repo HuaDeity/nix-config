@@ -4,14 +4,12 @@ _:
   "Actions" = 1586435171;
   # "AppRaven: Apps Gone Free" = 1490607195;
   "Bear" = 1091189122;
-  "Bitwarden" = 1352778147;
   "Bob" = 1630034110;
   "Cardhop" = 1290358394;
   # "Chronicling - Track Anything" = 6445992145;
   "Compressor" = 424390742;
   "Developer" = 640199958;
   "Dice by PCalc" = 1479250666;
-  "Drafts" = 1435957248;
   "Fantastical" = 975937182;
   "FilmNoir" = 1528417240;
   "Final Cut Pro" = 424389933;
@@ -62,9 +60,7 @@ _:
   "Streaks" = 963034692;
   "SubManager" = 1632853914;
   "Tampermonkey" = 6738342400;
-  "Tapestry Loom" = 6578414736;
   "Telegram" = 747648890;
-  "Territory" = 1454112177;
   "TestFlight" = 899247664;
   "TextSniper" = 1528890965;
   "Tripsy" = 1429967544;

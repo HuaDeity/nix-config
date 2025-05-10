@@ -25,7 +25,7 @@ in
 
   homebrew = {
     enable = true;
-    taps = builtins.attrNames config.nix-homebrew.taps;
+    taps = (import ./taps.nix) { };
     brews = (import ./brews.nix) { };
     casks = (import ./casks.nix) { };
     masApps = (import ./masApps.nix) { };

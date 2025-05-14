@@ -26,6 +26,7 @@ let
   ];
 
   cliPackages = [
+    clang
     home-manager
     mihomo
   ];

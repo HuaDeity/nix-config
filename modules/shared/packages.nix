@@ -33,6 +33,7 @@ _:
   "stylua"
   "taplo"
   "tmux"
+  "tree-sitter"
   "uv"
   "viu"
   "volta"

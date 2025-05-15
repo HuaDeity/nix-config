@@ -28,6 +28,7 @@ let
   cliPackages = [
     clang
     home-manager
+    llvmPackages.openmp
     mihomo
   ];
 

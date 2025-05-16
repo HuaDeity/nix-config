@@ -23,6 +23,7 @@ _:
   "marksman"
   "neovim"
   "ollama"
+  "rbenv"
   "ripgrep"
   "ruff"
   "rustup"

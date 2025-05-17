@@ -11,6 +11,9 @@
 
   environment.systemPackages = import ../../modules/shared/system-packages.nix { inherit pkgs; };
 
+  programs.bash.enable = false;
+  programs.zsh.enable = false;
+
   nix = {
     gc = {
       interval = {
@@ -39,6 +42,9 @@
           touchIdAuth = true;
         };
       };
+    };
+    pki = {
+      installCACerts = false;
     };
   };
 

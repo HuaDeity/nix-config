@@ -55,9 +55,6 @@
 
       darwinConfigurations = nixpkgs.lib.genAttrs darwinSystems (
         system:
-        let
-          user = "huadeity";
-        in
         darwin.lib.darwinSystem {
           inherit system;
           specialArgs = inputs;

@@ -4,7 +4,7 @@
 }:
 
 let
-  user = "huadeity";
+  user = config.system.primaryUser;
   brewPrefix = config.homebrew.brewPrefix;
 in
 {
@@ -70,5 +70,5 @@ in
       options = "--sort dateadded --view fan --display stack";
     }
   ];
-
+  local.dock.username = "${user}";
 }

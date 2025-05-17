@@ -78,6 +78,8 @@
       };
     };
 
+    primaryUser = "huadeity";
+
     stateVersion = 6;
   };
 }

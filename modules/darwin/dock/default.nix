@@ -34,6 +34,10 @@ in
         });
       readOnly = true;
     };
+    local.dock.username = mkOption {
+      description = "Username to apply the dock settings to";
+      type = types.str;
+    };
   };
 
   config = mkIf cfg.enable (
@@ -77,8 +81,9 @@ in
       ) cfg.entries;
     in
     {
-      system.activationScripts.postUserActivation.text = ''
-        echo >&2 "Setting up the Dock..."
+      system.activationScripts.postActivation.text = ''
+          echo >&2 "Setting up the Dock for ${cfg.username}..."
+          su ${cfg.username} -s /bin/sh <<'USERBLOCK'
         haveURIs="$(${brewPrefix}/dockutil --list | ${brewPrefix}/ucut -f2)"
         if ! diff -wu <(echo -n "$haveURIs") <(echo -n '${wantURIs}') >&2 ; then
           echo >&2 "Resetting Dock."
@@ -88,6 +93,7 @@ in
         else
           echo >&2 "Dock setup complete."
         fi
+        USERBLOCK
       '';
     }
   );

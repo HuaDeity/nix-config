@@ -19,6 +19,7 @@ _:
   "just"
   "lazygit"
   "less"
+  "ltex-ls-plus"
   "lua-language-server"
   "marksman"
   "neovim"
@@ -33,6 +34,7 @@ _:
   "starship"
   "stylua"
   "taplo"
+  "texlab"
   "tmux"
   "tree-sitter"
   "uv"
@@ -41,5 +43,7 @@ _:
   "wakatime-cli"
   "wget"
   "yazi"
+  # "zig"
+  # "zls"
   "zsh"
 ]

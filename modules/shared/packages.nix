@@ -1,7 +1,6 @@
 _:
 
 [
-  "antidote"
   "bash"
   "bat"
   "biome"
